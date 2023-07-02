@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css"><!--external-->
 </head>
 <body>
-    <h1 style="color: blue;">goodbye</h1> <!--inline the most important-->
-    <style> 
-    h1{
-        color: red;
-    }
-    </style> <!--internal-->
+    <div class="container">
+        <div>
+            <h1>Shopping list</h1>
+            <div class="add">
+                <input type="text" id="new-item">
+                <button class="addbutton" onclick="addItem()">+</button>
+                </div>
+            </div>
+            <div class="list">
+                <ul class="items" id="shopping-list">
+                  </ul>
+            </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

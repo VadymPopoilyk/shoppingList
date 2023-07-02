@@ -1,22 +1,16 @@
-'use strict'
+let shoppingList = document.getElementById("shopping-list");
 
-
-for(let i = 2; i > 0; i--) {
-    let myName = "Vadym";
-    console.log(myName)
+function addItem() {
+  let newItem = document.getElementById("new-item").value;
+  if (newItem !== "") {
+    let li = document.createElement("li");
+    li.appendChild(document.createTextNode(newItem));
+    li.addEventListener("click", removeItem);
+    shoppingList.appendChild(li);
+    document.getElementById("new-item").value = "";
+  }
 }
-let myName = "Vasia"
-console.log(myName)
 
-const BLOCK_SIZE = 14 + 15;
-
-let user = "Vasia", age = 36;
-
-function getsize() {
-    var size = 15;
+function removeItem() {
+  this.parentNode.removeChild(this);
 }
-getsize()
-console.log(size)
-qwerty = 11;
-console.log(qwerty);
-var qwerty;
